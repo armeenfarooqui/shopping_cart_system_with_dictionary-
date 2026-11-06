@@ -187,19 +187,18 @@ def checkout(products, shopping_cart):
         price = products[product]
         line_total = price * quantity
 
-        print("\nProduct:", product)
-        print("Unit Price: $", format(price, ".2f"))
+        print("Product:", product)
+        print("Unit Price:", price)
         print("Quantity:", quantity)
-        print("Line Total: $", format(line_total, ".2f"))
+        print("Line Total:", line_total)
 
         total_items = total_items + quantity
 
-    # Show final receipt information
-    print("\nTotal Items:", total_items)
-    print("Subtotal: $", format(total, ".2f"))
-    print("Discount:", format(discount * 100, ".0f"), "%")
-    print("Amount Saved: $", format(saved, ".2f"))
-    print("Final Total: $", format(final_total, ".2f"))
+    print("Total Items:", total_items)
+    print("Subtotal:", total)
+    print("Discount:", discount * 100, "%")
+    print("Amount Saved:", saved)
+    print("Final Total:", final_total)
 
     print("\nThank you for shopping!")
 
@@ -244,7 +243,7 @@ while True:
     # Option 5: Show current total
     elif choice == 5:
         total = calculate_total(products, shopping_cart)
-        print("Current Total: $", format(total, ".2f"))
+        print("Current Total:", total)
 
     # Option 6: Checkout
     elif choice == 6:
